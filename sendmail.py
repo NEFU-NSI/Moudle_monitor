@@ -8,10 +8,10 @@ def _format_addr(s):
     name,addr = parseaddr(s)
     return formataddr((Header(name,'utf-8').encode(),addr))
 def Email_send(content,title):
-    from_addr = 'monitor@nefu.edu.cn'#发件人地址
-    password = 'Nefu1234!!!'           #密码刚才复制的邮箱的授权码
+    from_addr = '@nefu.edu.cn'#发件人地址
+    password = ''           #密码刚才复制的邮箱的授权码
     to_addr =  'zyazhb@nefu.edu.cn'     #收件人地址
-    smtp_server = 'mail.nefu.edu.cn'    #邮箱服务器地址
+    smtp_server = ''    #邮箱服务器地址
     #设置邮件信息
     msg = MIMEText(content,'plain','utf-8')
     msg['From'] = _format_addr('站点状态自动报告系统<%s>'%from_addr)
